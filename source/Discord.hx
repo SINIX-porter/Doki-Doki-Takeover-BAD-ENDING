@@ -1,5 +1,5 @@
 package;
-
+#if desktop
 import Sys.sleep;
 import lime.app.Application;
 import discord_rpc.DiscordRpc;
@@ -101,3 +101,4 @@ class DiscordClient
 	}
 	#end
 }
+#end
