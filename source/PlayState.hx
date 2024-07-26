@@ -2493,7 +2493,7 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		if (!FlxG.autoPause && !paused && canPause && startedCountdown && !cpuControlled && !inCutscene)
+		if (!FlxG.autoPause && #if android || FlxG.android.justReleased.BACK #end && !paused && canPause && startedCountdown && !cpuControlled && !inCutscene)
 		{
 			pauseState();
 		}
