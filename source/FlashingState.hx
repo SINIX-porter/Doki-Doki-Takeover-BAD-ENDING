@@ -19,6 +19,9 @@ class FlashingState extends MusicBeatState
 	override function create()
 	{
 		super.create();
+                #if android
+		addVirtualPad(NOTHING, A_B)
+		#end
 
 		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('DDLCIntroWarning', 'preload'));
 		bg.alpha = 0;
