@@ -139,7 +139,7 @@ class CreditsState extends MusicBeatState
 			[
 				'Funkin\' Crew',
 				'psych',
-				'ninjamuffin99, PhantomArcade, Kawai Sprite, evilsk8r, EliteMasterEric',
+				'ninjamuffin99, PhantomArcade, Kawai Sprite, evilsk8r, EliteMasterEric, SINIX SKR PORTER DOKI DOKI TAKEOVER BAD ENDING',
 				'https://funkin.me/',
 			]
 		];
@@ -199,6 +199,9 @@ class CreditsState extends MusicBeatState
 		add(descText);
 
 		changeSelection();
+		#if android
+		addVirtualPad(UP_DOWN, B)
+		#end
 		super.create();
 	}
 
