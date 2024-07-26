@@ -20,7 +20,7 @@ class FlashingState extends MusicBeatState
 	{
 		super.create();
                 #if android
-		addVirtualPad(NOTHING, A_B)
+		addVirtualPad(NONE, A_B)
 		#end
 
 		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('DDLCIntroWarning', 'preload'));
