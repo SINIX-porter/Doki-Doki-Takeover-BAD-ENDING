@@ -61,6 +61,7 @@ class FunkinLua
 		lua = LuaL.newstate();
 		LuaL.openlibs(lua);
 		Lua.init_callbacks(lua);
+		#end
 
 		// trace('Lua version: ' + Lua.version());
 		// trace("LuaJIT version: " + Lua.versionJIT());
@@ -119,7 +120,7 @@ class FunkinLua
 		set('curStep', 0);
 
 		set('score', 0);
-		set('misses', 0);
+		set('breaks', 0);
 		set('hits', 0);
 
 		set('rating', 0);
