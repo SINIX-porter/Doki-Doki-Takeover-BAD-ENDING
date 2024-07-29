@@ -81,11 +81,11 @@ class StageData
 
 		#if MODS_ALLOWED
 		var modPath:String = Paths.modFolders('stages/' + stage + '.json');
-		if (Assets.exists(modPath))
+		if (FileSystem.exists(modPath))
 		{
 			rawJson = File.getContent(modPath);
 		}
-		else if (Assets.exists(path))
+		else if (FileSystem.exists(path))
 		{
 			rawJson = File.getContent(path);
 		}
