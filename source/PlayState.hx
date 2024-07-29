@@ -5035,12 +5035,6 @@ class PlayState extends MusicBeatState
 					spr.animation.play('drip');
 				}
 			}
-
-			if storyDifficultyText ('Unfair' && !note.isSustainNote && health >= 0.3)
-			{
-				health -= 0.01;
-			}
-
 			char.playAnim(animToPlay, true);
 			char.holdTimer = 0;
 		}
