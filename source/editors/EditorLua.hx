@@ -211,6 +211,7 @@ class EditorLua
 			}
 		});
 
+		#if desktop
 		Discord.DiscordClient.addLuaCallbacks(lua);
 
 		call('onCreate', []);
