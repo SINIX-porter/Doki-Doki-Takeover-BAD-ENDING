@@ -804,13 +804,6 @@ class PlayState extends MusicBeatState
 
 		// shaders right here lol
 		// funny static for all stages
-		if (ClientPrefs.shaders)
-		{
-			staticlol = new StaticShader();
-			_filters = [new ShaderFilter(staticlol)];
-			_filters = [new ShaderFilter(staticlol)];
-			staticlol.alpha.value = [staticAlpha];
-		}
 
 		if (isPixelStage)
 		{
