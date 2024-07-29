@@ -94,7 +94,7 @@ class WeekData
 		var modsListPath:String = 'modsList.txt';
 		var directories:Array<String> = [Paths.mods(), Paths.getPreloadPath()];
 		var originalLength:Int = directories.length;
-		if (Assets.exists(modsListPath))
+		if (FileSystem.exists(modsListPath))
 		{
 			var stuff:Array<String> = CoolUtil.coolTextFile(modsListPath);
 			for (i in 0...stuff.length)
@@ -207,6 +207,19 @@ class WeekData
 				var weekFile:WeekData = new WeekData(week);
 				if (i >= originalLength)
 				{
+					#if MODS_ALLOWED
+					weekFile.folder = directory.substring(Paths.mods().length, directory.length - 1);
+					#end
+				}
+				if ((PlayState.isStoryMode && !weekFile.hideStoryMode) || (!PlayState.isStoryMode && !weekFile.hideFreeplay))
+				{
+					weeksLoaded.set(weekToCheck, weekFile);
+					weeksList.push(weekToCheck);
+				}
+			}
+		}
+	}
+
 	private static function getWeekFile(path:String):WeekFile
 	{
 		var rawJson:String = null;
