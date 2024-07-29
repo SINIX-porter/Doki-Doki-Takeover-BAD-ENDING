@@ -66,10 +66,6 @@ class CloseGameSubState extends MusicBeatSubstate
 			selectItem(curSelected);
 	}
 
-	#if android
-	addVirtualPad(LEFT_RIGHT, A_B)
-	#end
-
 	function changeItem(huh:Int = 0)
 	{
 		FlxG.sound.play(Paths.sound('scrollMenu'));
