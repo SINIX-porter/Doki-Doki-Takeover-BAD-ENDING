@@ -9,6 +9,12 @@ import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxGame;
+#if android
+import flixel.group.FlxGroup;
+import android.flixel.FlxButton;
+import android.flixel.FlxHitbox;
+import android.flixel.FlxVirtualPad;
+#end
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -1231,13 +1237,6 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
-
-		#if android
-                import flixel.group.FlxGroup;
-                import android.flixel.FlxButton;
-                import android.flixel.FlxHitbox;
-                import android.flixel.FlxVirtualPad;
-                #end
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
