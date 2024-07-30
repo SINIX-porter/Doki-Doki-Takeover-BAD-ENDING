@@ -96,7 +96,7 @@ class Song
 		var formattedSong:String = Paths.formatToSongPath(jsonInput);
 		#if desktop
 		var moddyFile:String = Paths.modsJson(formattedFolder + '/' + formattedSong);
-		if (Assets.exists(moddyFile))
+		if (FileSystem.exists(moddyFile))
 		{
 			rawJson = File.getContent(moddyFile).trim();
 		}
